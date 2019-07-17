@@ -21,7 +21,7 @@ func CreateBot() (reddit.Bot, error) {
 //FetchNRedditPosts lists posts from a valid subreddit
 func FetchNRedditPosts(bot reddit.Bot, n int, subreddit string) ([]*reddit.Post, error) {
 	//pls help
-	harvest, err := bot.Listing("r/"+subreddit, "")
+	harvest, err := bot.Listing("/r/"+subreddit, "")
 
 	if err != nil {
 		fmt.Println("Error fetching from subreddit")
@@ -32,7 +32,7 @@ func FetchNRedditPosts(bot reddit.Bot, n int, subreddit string) ([]*reddit.Post,
 	return PostsArray, nil
 }
 
-func List
+//func List
 
 func main() {
 
