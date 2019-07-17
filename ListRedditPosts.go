@@ -16,5 +16,7 @@ func CreateBot() (reddit.Bot, error) {
 
 //ListNRedditPosts lists posts from a valid subreddit
 func ListNRedditPosts(bot reddit.Bot, n int, subreddit string) (reddit.Bot, error) {
+	//pls help
 
+	return nil, nil
 }
