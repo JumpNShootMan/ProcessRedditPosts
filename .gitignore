@@ -23,10 +23,8 @@
 /vendor/
 /Godeps/
 
-### sensitive files ###
-*.agent
+### Files ###
 agent
 
+
 # End of https://www.gitignore.io/api/go
-
-
