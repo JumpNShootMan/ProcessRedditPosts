@@ -14,4 +14,5 @@ func ListNRedditPosts(n int, subreddit string) (reddit.Bot, error) {
 	}
 
 	return bot, err
+
 }
