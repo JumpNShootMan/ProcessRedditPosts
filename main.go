@@ -32,7 +32,12 @@ func FetchNRedditPosts(bot reddit.Bot, n int, subreddit string) ([]*reddit.Post,
 	return PostsArray, nil
 }
 
-//func List
+//ListRedditPosts lists reddit posts from a given array
+func ListRedditPosts(PostsArray []*reddit.Post) {
+	for _, post := range PostsArray {
+		fmt.Printf("[%s] posted [%s]\n", post.Author, post.Title)
+	}
+}
 
 func main() {
 
@@ -42,7 +47,10 @@ func main() {
 	}
 	PostsArray, err := FetchNRedditPosts(redditbot, 50, "programming")
 
-	for _, post := range PostsArray {
-		fmt.Printf("[%s] posted [%s]\n", post.Author, post.Title)
-	}
+	//ListRedditPosts(PostsArray)
+
+	CommentsArray := PostsArray[1].Replies
+
+	fmt.Println(CommentsArray[1].Author)
+
 }
