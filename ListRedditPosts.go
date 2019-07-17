@@ -1,11 +1,9 @@
-package main
+package listnredditposts
 
 import "github.com/turnage/graw/reddit"
 
-//ListNRedditPosts(n int, subreddit string)
-
-func ListNRedditPosts(n int, subreddit string) (reddit.Bot, error) {
-
+//CreateBot creates a bot with credentials
+func CreateBot() (reddit.Bot, error) {
 	bot, err := reddit.NewBotFromAgentFile("agent", 0)
 
 	if err != nil {
@@ -14,5 +12,9 @@ func ListNRedditPosts(n int, subreddit string) (reddit.Bot, error) {
 	}
 
 	return bot, err
+}
+
+//ListNRedditPosts lists posts from a valid subreddit
+func ListNRedditPosts(bot reddit.Bot, n int, subreddit string) (reddit.Bot, error) {
 
 }
